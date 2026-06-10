@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="tr" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NestBlocks | Premium Pastel Manyetik Blok Dünyası</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Poppins', sans-serif; }
+        h1, h2, h3 { font-family: 'Montserrat', sans-serif; }
+        
+        /* Arka plandaki blokların süzülme animasyonları */
+        @keyframes floatSlow {
+            0% { transform: translateY(0px) rotate(0deg); }
+            50% { transform: translateY(-30px) rotate(10deg); }
+            100% { transform: translateY(0px) rotate(0deg); }
+        }
+        @keyframes floatReverse {
+            0% { transform: translateY(0px) rotate(0deg); }
+            50% { transform: translateY(30px) rotate(-15deg); }
+            100% { transform: translateY(0px) rotate(0deg); }
+        }
+        .anim-block-1 { animation: floatSlow 12s ease-in-out infinite; }
+        .anim-block-2 { animation: floatReverse 14s ease-in-out infinite; }
+        
+        /* Logo için parlama efekti */
+        .logo-glow { filter: drop-shadow(0px 0px 12px rgba(222, 155, 114, 0.6)); }
+    </style>
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+</head>
+<body class="bg-[#6D818A] text-slate-100 antialiased relative overflow-x-hidden">
+
+    <div class="fixed inset-0 pointer-events-none z-0 hidden xl:block overflow-hidden">
+        <div class="absolute left-6 top-[15%] w-16 h-16 bg-[#DE9B72]/20 rounded-xl border border-[#DE9B72]/30 anim-block-1"></div>
+        <div class="absolute left-10 top-[40%] w-0 h-0 border-l-[35px] border-l-transparent border-r-[35px] border-r-transparent border-b-[55px] border-b-[#7B929B]/40 anim-block-2"></div>
+        <div class="absolute right-8 top-[20%] w-14 h-14 bg-[#7B929B]/30 rounded-full border border-white/10 anim-block-2"></div>
+        <div class="absolute right-6 top-[55%] w-20 h-20 bg-[#DE9B72]/15 rounded-3xl transform rotate-45 border border-[#DE9B72]/20 anim-block-1"></div>
+    </div>
+
+    <nav class="sticky top-0 bg-[#6D818A]/95 backdrop-blur-md z-50 border-b-2 border-[#DE9B72] shadow-xl relative">
+        <div class="max-w-7xl mx-auto px-6 py-3 flex justify-between items-center">
+            
+            <a href="#" class="flex items-center gap-4 group">
+                <div class="p-1.5 rounded-xl bg-white/10 border border-[#DE9B72]/50 transition-all shadow-md">
+                    <img src="NestBlocks_Logo.png" alt="NestBlocks Logo" class="h-16 object-contain logo-glow transition-transform duration-300 group-hover:scale-105">
+                </div>
+                <span class="text-3xl font-bold tracking-wider text-white hidden sm:inline">Nest<span class="text-[#DE9B72]">Blocks</span></span>
+            </a>
+            
+            <div class="flex items-center space-x-6 font-medium text-slate-100 text-sm">
+                <div class="hidden lg:flex space-x-6 items-center">
+                    <a href="#" data-i18n="navHome" class="hover:text-[#DE9B72] transition">Home</a>
+                    <a href="#about" data-i18n="navStory" class="hover:text-[#DE9B72] transition">Our Story</a>
+                    <a href="#features" data-i18n="navFeatures" class="hover:text-[#DE9B72] transition">Features</a>
+                    <a href="#collection" data-i18n="navProducts" class="hover:text-[#DE9B72] transition">Products</a>
+                </div>
+                
+                <div class="flex items-center bg-[#5B6B73] p-1 rounded-full border border-[#4A5960] space-x-1">
+                    <button onclick="switchLanguage('en')" id="btn-en" class="w-8 h-8 rounded-full flex items-center justify-center text-base transition duration-300" title="English">🇬🇧</button>
+                    <button onclick="switchLanguage('nl')" id="btn-nl" class="w-8 h-8 rounded-full flex items-center justify-center text-base transition duration-300" title="Nederlands">🇳🇱</button>
+                </div>
+                <a href="#contact" data-i18n="navContact" class="bg-[#DE9B72] text-white px-6 py-2.5 rounded-full hover:bg-[#C9855D] transition shadow-md font-bold hidden sm:block">Get in Touch</a>
+            </div>
+        </div>
+    </nav>
+
+    <section class="w-full bg-[#6D818A] py-16 md:py-24 relative z-10">
+        <div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-12 relative">
+            
+            <div class="absolute -top-10 -left-10 hidden lg:block opacity-20 z-0 anim-block-1">
+                <div class="p-6 rounded-full bg-white/5 border border-[#DE9B72]/30 shadow-2xl">
+                    <img src="NestBlocks_Logo.png" alt="NestBlocks Seal" class="h-40 object-contain">
+                </div>
+            </div>
+
+            <div class="space-y-6 md:w-1/2 relative z-10" data-aos="fade-right">
+                <span data-i18n="heroBadge" class="inline-block text-[#DE9B72] font-bold tracking-widest uppercase text-xs bg-[#7B929B] px-3 py-1 rounded-full">For Ages 2 to 99</span>
+                <h1 class="text-4xl md:text-5xl font-bold text-white leading-tight">
+                    <span data-i18n="heroTitle1">Forget Small Blocks!</span><br>
+                    <span data-i18n="heroTitle2" class="text-[#DE9B72]">Build Your Own World in Giant Size!</span>
+                </h1>
+                <p data-i18n="heroDesc" class="text-slate-200 leading-relaxed text-lg">
+                    NestBlocks are innovative, giant magnetic blocks that allow children to build massive castles, rockets and play areas they can actually step inside. A screen-free play experience.
+                </p>
+                <div class="pt-2 flex gap-4">
+                    <a href="#collection" data-i18n="heroBtn1" class="inline-block bg-[#DE9B72] text-white font-semibold px-8 py-4 rounded-2xl shadow-xl hover:bg-[#C9855D] transition duration-300">Explore Collection</a>
+                    <a href="#about" data-i18n="heroBtn2" class="inline-block bg-[#7B929B] text-white font-semibold px-8 py-4 rounded-2xl hover:bg-[#8AA4AE] transition duration-300">Learn More</a>
+                </div>
+            </div>
+            <div class="md:w-1/2 w-full relative z-10" data-aos="zoom-in" data-aos-delay="100">
+                <div class="relative">
+                    <div class="absolute -inset-1 bg-gradient-to-r from-[#5B6B73] to-[#DE9B72] rounded-3xl blur opacity-30"></div>
+                    <img src="IceCream.png" alt="NestBlocks Building" class="relative rounded-3xl shadow-2xl w-full object-cover h-[400px] md:h-[550px]">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="bg-[#5B6B73] text-white py-12 border-t border-b border-[#4A5960] relative z-10">
+        <div class="max-w-7xl mx-auto px-6 grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+            <div data-aos="fade-up" data-aos-delay="100">
+                <p class="text-4xl md:text-5xl font-bold text-[#DE9B72]">10K+</p>
+                <p data-i18n="stat1" class="text-slate-100 text-sm mt-2">Happy Kids</p>
+            </div>
+            <div data-aos="fade-up" data-aos-delay="200">
+                <p class="text-4xl md:text-5xl font-bold text-[#DE9B72]">2-99</p>
+                <p data-i18n="stat2" class="text-slate-100 text-sm mt-2">Age Suitability</p>
+            </div>
+            <div data-aos="fade-up" data-aos-delay="300">
+                <p class="text-4xl md:text-5xl font-bold text-[#DE9B72]">%100</p>
+                <p data-i18n="stat3" class="text-slate-100 text-sm mt-2">Safe Material</p>
+            </div>
+            <div data-aos="fade-up" data-aos-delay="400">
+                <p data-i18n="stat4Title" class="text-4xl md:text-5xl font-bold text-[#DE9B72]">Awarded</p>
+                <p data-i18n="stat4Desc" class="text-slate-100 text-sm mt-2">STEM Design</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="relative min-h-[500px] bg-fixed bg-center bg-cover flex items-center justify-center z-10" style="background-image: url('pictures/Pizza.png');">
+        <div class="absolute inset-0 bg-[#4A5960]/80 backdrop-blur-[2px]"></div>
+        <div class="relative z-10 text-center text-white max-w-4xl mx-auto px-6 py-16" data-aos="fade-up">
+            <span data-i18n="storyBadge" class="text-[#DE9B72] font-bold tracking-widest uppercase text-xs mb-3 block">OUR STORY</span>
+            <h2 data-i18n="storyTitle" class="text-3xl md:text-5xl font-bold mb-6">Turning Dreams Into Reality</h2>
+            <p data-i18n="storyDesc" class="text-lg text-slate-100 leading-relaxed max-w-3xl mx-auto font-light">
+                At NestBlocks, we wanted children to build their own universes. Thanks to our reinforced giant magnetic panels, children can open their own pizza shop one day, and become an astronaut inside a rocket the next. The only limit is imagination!
+            </p>
+        </div>
+    </section>
+
+    <section id="features" class="py-20 bg-[#6D818A] relative z-10">
+        <div class="max-w-7xl mx-auto px-6 space-y-24">
+            <div class="flex flex-col md:flex-row items-center gap-12">
+                <div class="md:w-1/2 space-y-4" data-aos="fade-right">
+                    <span data-i18n="feat1Badge" class="text-white font-bold text-xs uppercase tracking-wider">Engineering</span>
+                    <h3 data-i18n="feat1Title" class="text-3xl font-bold text-white">Extra Strong Magnets</h3>
+                    <p data-i18n="feat1Desc" class="text-slate-200 leading-relaxed">Specially protected neodymium magnets ensure structures remain completely stable. Children can safely go inside and play.</p>
+                </div>
+                <div class="md:w-1/2" data-aos="fade-left">
+                    <img src="Rocket.png" alt="Rocket" class="rounded-3xl shadow-md w-full h-80 object-cover border border-[#5B6B73]">
+                </div>
+            </div>
+
+            <div class="flex flex-col md:flex-row-reverse items-center gap-12">
+                <div class="md:w-1/2 space-y-4" data-aos="fade-left">
+                    <span data-i18n="feat2Badge" class="text-[#DE9B72] font-bold text-xs uppercase tracking-wider">Growth (STEM)</span>
+                    <h3 data-i18n="feat2Title" class="text-3xl font-bold text-white">Role Playing & Social Skills</h3>
+                    <p data-i18n="feat2Desc" class="text-slate-200 leading-relaxed">Children create social hubs like clinics or stands. Problem-solving and fine motor skills improve naturally.</p>
+                </div>
+                <div class="md:w-1/2" data-aos="fade-right">
+                    <img src="Doctor.png" alt="Doctor" class="rounded-3xl shadow-md w-full h-80 object-cover border border-[#5B6B73]">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="max-w-6xl mx-auto px-6 py-16 relative z-10" data-aos="fade-up">
+        <div class="bg-gradient-to-br from-[#5B6B73] to-[#4A5960] rounded-3xl p-8 md:p-16 text-white shadow-2xl flex flex-col lg:flex-row gap-12 items-center border border-[#8AA4AE]/30">
+            <div class="lg:w-1/2 space-y-6">
+                <span data-i18n="formBadge" class="text-[#DE9B72] font-bold tracking-widest uppercase text-xs block">CONTACT US</span>
+                <h2 data-i18n="formTitle" class="text-3xl md:text-4xl font-bold">Let's Connect</h2>
+                <p data-i18n="formDesc" class="text-slate-200">Fill out the form for pre-school orders or questions.</p>
+            </div>
+            <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST" class="lg:w-1/2 w-full space-y-4">
+                <input type="text" id="form-name" placeholder="Full Name" required class="w-full p-4 rounded-xl bg-[#6D818A] focus:ring-2 focus:ring-[#DE9B72] text-white outline-none">
+                <input type="email" id="form-email" placeholder="Email" required class="w-full p-4 rounded-xl bg-[#6D818A] focus:ring-2 focus:ring-[#DE9B72] text-white outline-none">
+                <textarea id="form-msg" placeholder="Message" rows="4" required class="w-full p-4 rounded-xl bg-[#6D818A] focus:ring-2 focus:ring-[#DE9B72] text-white outline-none"></textarea>
+                <button type="submit" id="form-btn" class="w-full bg-[#DE9B72] hover:bg-[#C9855D] font-bold py-4 rounded-xl shadow-lg transition">Send</button>
+            </form>
+        </div>
+    </section>
+
+    <footer class="bg-[#4A5960] text-slate-300 py-12 px-6 relative z-10">
+        <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-6 text-sm">
+            <div class="flex items-center gap-3">
+                <img src="NestBlocks_Logo.png" class="h-8">
+                <p class="font-bold text-white">NestBlocks © 2026</p>
+            </div>
+            <div class="flex gap-6 text-xs font-medium">
+                <a href="#" class="hover:text-white">Privacy Policy</a>
+                <a href="#" class="hover:text-white">Terms of Service</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const translations = {
+            en: {
+                navHome: "Home", navStory: "Our Story", navFeatures: "Features", navProducts: "Products", navContact: "Get in Touch",
+                heroBadge: "For Ages 2 to 99", heroTitle1: "Forget Small Blocks!", heroTitle2: "Build Your Own World in Giant Size!",
+                heroDesc: "NestBlocks are innovative, giant magnetic blocks that allow children to build massive castles, rockets and play areas they can actually step inside. A screen-free play experience.",
+                heroBtn1: "Explore Collection", heroBtn2: "Learn More",
+                stat1: "Happy Kids", stat2: "Age Suitability", stat3: "Safe Material", stat4Title: "Awarded", stat4Desc: "STEM Design",
+                storyBadge: "OUR STORY", storyTitle: "Turning Dreams Into Reality", storyDesc: "At NestBlocks, we wanted children to build their own universes. Thanks to our reinforced giant magnetic panels, children can open their own pizza shop one day, and become an astronaut inside a rocket the next. The only limit is imagination!",
+                feat1Badge: "Engineering", feat1Title: "Extra Strong Magnets", feat1Desc: "Specially protected neodymium magnets ensure structures remain completely stable. Children can safely go inside and play.",
+                feat2Badge: "Growth (STEM)", feat2Title: "Role Playing & Social Skills", feat2Desc: "Children create social hubs like clinics or stands. Problem-solving and fine motor skills improve naturally.",
+                shopBadge: "Our Shop", shopTitle: "Development Sets", prodBtn: "Info",
+                prod1Title: "Magnetic Letters", prod2Title: "Starter Pack", prod3Title: "Master Set",
+                formBadge: "CONTACT US", formTitle: "Let's Connect", formDesc: "Fill out the form for pre-school orders or questions.",
+                formPlcName: "Full Name", formPlcEmail: "Email", formPlcMsg: "Message...", formBtnTxt: "Send"
+            },
+            nl: {
+                navHome: "Home", navStory: "Ons Verhaal", navFeatures: "Kenmerken", navProducts: "Producten", navContact: "Neem Contact Op",
+                heroBadge: "Voor Leeftijden 2 tot 99", heroTitle1: "Vergeet Kleine Blokken!", heroTitle2: "Bouw Je Eigen Wereld in Reuzenformaat!",
+                heroDesc: "NestBlocks zijn innovatieve, gigantische magnetische blokken waarmee kinderen enorme kastelen en raketten kunnen bouwen waar ze echt in kunnen stappen. Een schermvrije speelervaring.",
+                heroBtn1: "Ontdek de Collectie", heroBtn2: "Meer Informatie",
+                stat1: "Tevreden Kinderen", stat2: "Geschikte Leeftijd", stat3: "Veilig Materiaal", stat4Title: "Bekroond", stat4Desc: "STEM Ontwerp",
+                storyBadge: "ONS VERHAAL", storyTitle: "Dromen Werkelijkheid Maken", storyDesc: "Bij NestBlocks wilden we dat kinderen hun eigen universums bouwen. Dankzij onze versterkte reusachtige panelen kunnen kinderen de ene dag een pizzawinkel openen en de volgende dag in een raket stappen.",
+                feat1Badge: "Techniek", feat1Title: "Extra Sterke Magneten", feat1Desc: "Speciaal beschermde neodymiummagneten zorgen ervoor dat constructies stabiel blijven. Kinderen kunnen er veilig in spelen.",
+                feat2Badge: "Groei (STEM)", feat2Title: "Rollenspel & Sociale Vaardigheden", feat2Desc: "Kinderen creëren sociale ontmoetingsplekken. Probleemoplossing en fijne motoriek verbeteren natuurlijk.",
+                shopBadge: "Onze Winkel", shopTitle: "Ontwikkelingssets", prodBtn: "Info",
+                prod1Title: "Magnetische Letters", prod2Title: "Starterspakket", prod3Title: "Masterset",
+                formBadge: "NEEM CONTACT OP", formTitle: "Laten We Verbinden", formDesc: "Vul het formulier in voor bestellingen of vragen.",
+                formPlcName: "Volledige Naam", formPlcEmail: "E-mailadres", formPlcMsg: "Bericht...", formBtnTxt: "Verzenden"
+            }
+        };
+
+        function switchLanguage(lang) {
+            document.querySelectorAll('[data-i18n]').forEach(elem => {
+                const key = elem.getAttribute('data-i18n');
+                if (translations[lang][key]) elem.innerHTML = translations[lang][key];
+            });
+
+            document.getElementById('form-name').placeholder = translations[lang].formPlcName;
+            document.getElementById('form-email').placeholder = translations[lang].formPlcEmail;
+            document.getElementById('form-msg').placeholder = translations[lang].formPlcMsg;
+            document.getElementById('form-btn').innerText = translations[lang].formBtnTxt;
+            document.documentElement.lang = lang;
+
+            if(lang === 'en') {
+                document.getElementById('btn-en').className = "w-8 h-8 rounded-full flex items-center justify-center text-base bg-[#DE9B72] border border-[#DE9B72] shadow-sm";
+                document.getElementById('btn-nl').className = "w-8 h-8 rounded-full flex items-center justify-center text-base hover:bg-[#6D818A]";
+            } else {
+                document.getElementById('btn-nl').className = "w-8 h-8 rounded-full flex items-center justify-center text-base bg-[#DE9B72] border border-[#DE9B72] shadow-sm";
+                document.getElementById('btn-en').className = "w-8 h-8 rounded-full flex items-center justify-center text-base hover:bg-[#6D818A]";
+            }
+        }
+
+        // Parallax Effect
+        window.addEventListener('scroll', () => {
+            const scrolled = window.pageYOffset;
+            const blocks = document.querySelectorAll('.fixed .absolute');
+            blocks.forEach((block, index) => {
+                const speed = (index % 2 === 0) ? 0.08 : -0.05;
+                block.style.transform = `translateY(${scrolled * speed}px)`;
+            });
+        });
+
+        document.addEventListener("DOMContentLoaded", () => {
+            switchLanguage('nl'); // Varsayılan Felemenkçe başlat
+        });
+    </script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>AOS.init({ duration: 900, once: true });</script>
+</body>
+</html>
